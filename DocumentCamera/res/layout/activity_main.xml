@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/surfaceview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.example.documentcamera.AnnotationView
+            android:id="@+id/annotation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_color_board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/surfaceview_container"
+        android:layout_marginLeft="60dip"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/color_black"
+            android:layout_width="52dip"
+            android:layout_height="50dip"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:onClick="colorSelector" />
+
+        <ImageButton
+            android:id="@+id/color_blue"
+            android:layout_width="52dip"
+            android:layout_height="50dip"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:onClick="colorSelector" />
+
+        <ImageButton
+            android:id="@+id/color_cyan"
+            android:layout_width="52dip"
+            android:layout_height="50dip"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="@color/cyan"
+            android:onClick="colorSelector" />
+
+        <ImageButton
+            android:id="@+id/color_darkgray"
+            android:layout_width="52dip"
+            android:layout_height="50dip"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="@color/darkgray"
+            android:onClick="colorSelector" />
+
+        <ImageButton
+            android:id="@+id/color_red"
+            android:layout_width="52dip"
+            android:layout_height="50dip"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:onClick="colorSelector" />
+
+        <ImageButton
+            android:id="@+id/color_yellow"
+            android:layout_width="52dip"
+            android:layout_height="50dip"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="@color/yellow"
+            android:onClick="colorSelector" />
+
+        <ImageButton
+            android:id="@+id/color_green"
+            android:layout_width="52dip"
+            android:layout_height="50dip"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:onClick="colorSelector" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/button_capture"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignRight="@id/surfaceview_container"
+        android:layout_centerInParent="true"
+        android:background="#00000000"
+        android:onClick="buttonClick"
+        android:padding="5dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_take_photo" />
+
+    <ImageButton
+        android:id="@+id/button_switch"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignTop="@id/surfaceview_container"
+        android:layout_centerInParent="true"
+        android:onClick="buttonClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_switch_video" />
+
+    <ImageButton
+        android:id="@+id/button_settings"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignLeft="@id/button_switch"
+        android:layout_alignTop="@id/surfaceview_container"
+        android:layout_marginLeft="60dip"
+        android:onClick="buttonClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_settings" />
+
+    <ImageButton
+        android:id="@+id/button_gallery"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignLeft="@id/button_settings"
+        android:layout_alignTop="@id/surfaceview_container"
+        android:layout_marginLeft="60dip"
+        android:onClick="buttonClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_gallery" />
+
+    <ImageButton
+        android:id="@+id/button_pen"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignLeft="@id/surfaceview_container"
+        android:layout_alignTop="@id/surfaceview_container"
+        android:layout_marginTop="100dip"
+        android:onClick="buttonClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_pen" />
+
+    <ImageButton
+        android:id="@+id/button_color_selector"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignLeft="@id/surfaceview_container"
+        android:layout_alignTop="@id/button_pen"
+        android:layout_marginTop="100dip"
+        android:onClick="buttonClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_color" />
+
+    <ImageButton
+        android:id="@+id/button_eraser"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignLeft="@id/surfaceview_container"
+        android:layout_alignTop="@id/button_color_selector"
+        android:layout_marginTop="100dip"
+        android:onClick="buttonClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_eraser" />
+
+</RelativeLayout>
